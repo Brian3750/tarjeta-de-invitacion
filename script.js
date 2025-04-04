@@ -18,7 +18,6 @@ function ocultarTodos() {
     secciones.forEach(seccion => seccion.classList.remove('active'));
 }
 
-// Mostrar la sección correcta según el parámetro en la URL
 document.addEventListener("DOMContentLoaded", function () {
     const params = new URLSearchParams(window.location.search);
     const pantalla = params.get("pantalla");
@@ -30,18 +29,6 @@ document.addEventListener("DOMContentLoaded", function () {
     } else if (pantalla === "invitacion2") {
         mostrarInvitacion2();
     } else {
-        document.getElementById("sobreScreen").classList.add("active"); // pantalla inicial por defecto
+        document.getElementById("sobreScreen").classList.add("active");
     }
-
-    // Generar el código QR que apunta directamente a la invitación
-    const urlInvitacion = window.location.origin + window.location.pathname + "?pantalla=invitacion";
-
-    new QRCode(document.getElementById("qrcode"), {
-        text: urlInvitacion,
-        width: 200,
-        height: 200,
-        colorDark: "#000000",
-        colorLight: "#ffffff",
-        correctLevel: QRCode.CorrectLevel.H
-    });
 });
