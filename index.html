@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página con GIF y Bienvenida</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+
+    <div class="container active" id="sobreScreen">
+        <img src="Sobre-GIF-Terminado.gif" alt="Sobre Animado">
+        <div class="button-container">
+            <button onclick="mostrarBienvenida()">Bienvenidos</button>
+        </div>
+    </div>
+
+    <div class="container" id="bienvenidaScreen">
+        <img src="mateo.png.jpg" alt="Mateo Ignacio">
+        <h1>Mateo Ignacio llegará pronto a casa</h1>
+        <div class="button-container">
+            <button onclick="mostrarInvitacion()">Invitación</button>
+        </div>
+    </div>
+
+    <div class="container" id="invitacionScreen">
+        <img src="invitacion.png" alt="Invitación al Baby Shower">
+        <div class="button-container">
+            <button onclick="mostrarInvitacion2()">Invitación 2</button>
+        </div>
+    </div>
+
+    <div class="container" id="invitacion2Screen">
+        <img src="invitacion 2.png" alt="Invitación al Baby Shower 2">
+    </div>
+
+    <!-- Contenedor del código QR -->
+    <div id="qr-container">
+        <h2>Escanea para ver más información:</h2>
+        <div id="qrcode"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
