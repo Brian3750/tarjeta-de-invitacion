@@ -3,13 +3,13 @@ let timeoutId;
 function mostrarBienvenida() {
     ocultarTodos();
     document.getElementById("bienvenidaScreen").classList.add("active");
-    timeoutId = setTimeout(mostrarInvitacion, 3000); // Muestra la invitación después de 3 segundos
+    timeoutId = setTimeout(mostrarInvitacion, 2000); // Muestra la invitación después de 3 segundos
 }
 
 function mostrarInvitacion() {
     ocultarTodos();
     document.getElementById("invitacionScreen").classList.add("active");
-    timeoutId = setTimeout(mostrarInvitacion2, 3000); // Muestra la invitación 2 después de 3 segundos
+    timeoutId = setTimeout(mostrarInvitacion2, 2000); // Muestra la invitación 2 después de 3 segundos
 }
 
 function mostrarInvitacion2() {
@@ -32,5 +32,5 @@ document.addEventListener("DOMContentLoaded", function () {
     // Al cargar la página, muestra la primera pantalla con el QR
     document.getElementById("sobreScreen").classList.add("active");
     // Inicia la secuencia automática después de un breve tiempo (ej. 5 segundos para que puedan escanear)
-    timeoutId = setTimeout(mostrarBienvenida, 5000);
+    timeoutId = setTimeout(mostrarBienvenida, 2000);
 });
